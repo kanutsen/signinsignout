@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Sign-In/Sign-Out</title>
+  <title>Student Sign In/Out</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Student Sign-In/Sign-Out</h1>
-  <select id="studentName">
-    <!-- Student names will be populated here -->
-  </select>
-  <button onclick="recordAction('Sign In')">Sign In</button>
-  <button onclick="recordAction('Sign Out')">Sign Out</button>
+
+  <h1>Student Sign In/Out</h1>
+
+  <label for="studentName">Student Name:</label>
+  <input type="text" id="studentName" list="studentNames">
+  <datalist id="studentNames">
+    <!-- Student names will be populated here by script.js -->
+  </datalist>
+
+  <button onclick="recordAction('SignIn')">Sign In</button>
+  <button onclick="recordAction('SignOut')">Sign Out</button>
+  <button onclick="recordAction('Bathroom')">Bathroom</button>
   <button onclick="exportData()">Export Data</button>
+
   <script src="script.js"></script>
+
 </body>
 </html>
